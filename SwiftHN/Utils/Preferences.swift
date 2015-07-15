@@ -38,7 +38,7 @@ class Preferences {
     }
     
     func isInReadingList(uid: String) -> Bool {
-        var array: [AnyObject]! = self.pUserDefault.arrayForKey(pReadLater)
+        let array: [AnyObject]! = self.pUserDefault.arrayForKey(pReadLater)
         if (array == nil) {
             return false
         }

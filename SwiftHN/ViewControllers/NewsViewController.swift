@@ -23,6 +23,7 @@ class NewsViewController: HNTableViewController, NewsCellDelegate, CategoriesVie
         
         self.setupInfiniteScrollingView()
         self.setupNavigationItems()
+        self.onPullToFresh()
     }
     
     private func setupInfiniteScrollingView() {
@@ -82,7 +83,6 @@ class NewsViewController: HNTableViewController, NewsCellDelegate, CategoriesVie
     override func viewDidAppear(animated: Bool) {
         super.viewDidAppear(animated)
         
-        self.onPullToFresh()
         self.showFirstTimeEditingCellAlert()
     }
     
@@ -110,7 +110,7 @@ class NewsViewController: HNTableViewController, NewsCellDelegate, CategoriesVie
             var alert = UIAlertController(title: "Quick actions",
                 message: "By swiping a cell you can quickly send post to the Safari Reading list, or use the more button to share it and access other functionalities",
                 preferredStyle: UIAlertControllerStyle.Alert)
-            alert.addAction(UIAlertAction(title: "Ok", style: UIAlertActionStyle.Cancel, handler: {(action: UIAlertAction?) in
+            alert.addAction(UIAlertAction(title: "Ok", style: UIAlertActionStyle.Cancel, handler: {(action: UIAlertAction) in
                 Preferences.sharedInstance.firstTimeLaunch = true
             }))
             self.presentViewController(alert, animated: true, completion: nil)
@@ -199,7 +199,7 @@ class NewsViewController: HNTableViewController, NewsCellDelegate, CategoriesVie
     override func tableView(tableView: UITableView, editActionsForRowAtIndexPath indexPath: NSIndexPath) -> [UITableViewRowAction]? {
         var readingList = UITableViewRowAction(style: UITableViewRowActionStyle.Normal,
             title: "Read\nLater",
-            handler: {(action: UITableViewRowAction!, indexpath: NSIndexPath!) -> Void in
+            handler: {(action: UITableViewRowAction, indexpath: NSIndexPath) -> Void in
                 if (Helper.addPostToReadingList(self.datasource[indexPath.row] as! Post)) {
                 }
                 var post = self.datasource

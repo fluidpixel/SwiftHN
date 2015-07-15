@@ -39,7 +39,7 @@ class InterfaceController: WKInterfaceController {
             var row = self.tableView.rowControllerAtIndex(rowCount) as! HNNewsRow
             row.voteLabel.setText(String(item.points))
             row.titleLabel.setText(item.title)
-            row.usernameLabel.setText(String(item.commentsCount) + " Comments")
+            row.usernameLabel.setText(String(item.commentsCount))
             row.domainLabel.setText(item.domain)
             rowCount++
         }

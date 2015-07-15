@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder.WatchKit.Storyboard" version="3.0" toolsVersion="6751" systemVersion="14D87h" targetRuntime="watchKit" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="AgC-eL-Hgc">
+<document type="com.apple.InterfaceBuilder.WatchKit.Storyboard" version="3.0" toolsVersion="8152.3" systemVersion="14E46" targetRuntime="watchKit" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="AgC-eL-Hgc">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6736"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBWatchKitPlugin" version="3737"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="8124.4"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBWatchKitPlugin" version="8077.2"/>
     </dependencies>
     <scenes>
         <!--HN:Top-->
@@ -15,21 +15,9 @@
                                 <tableRow identifier="HNNewsRow" id="dw8-I4-MeM" customClass="HNNewsRow" customModule="Hacker_News_WatchKit_Extension">
                                     <group key="rootItem" width="1" height="0.0" alignment="left" layout="vertical" id="n3P-mE-HDF">
                                         <items>
-                                            <group width="1" alignment="left" id="U9r-NU-DFB">
+                                            <group width="1" alignment="left" id="rdQ-oZ-Jk9">
                                                 <items>
-                                                    <label alignment="left" text="comments" id="Lsl-Oo-151">
-                                                        <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
-                                                        <fontDescription key="font" style="UICTFontTextStyleFootnote"/>
-                                                    </label>
-                                                </items>
-                                            </group>
-                                            <label alignment="left" text="domain" id="LCA-Ei-uIU">
-                                                <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
-                                                <fontDescription key="font" style="UICTFontTextStyleFootnote"/>
-                                            </label>
-                                            <group width="1" height="0.0" alignment="left" id="rdQ-oZ-Jk9">
-                                                <items>
-                                                    <label width="20" height="1" alignment="left" text="10" textAlignment="center" numberOfLines="0" id="DFd-L3-5fz">
+                                                    <label width="20" height="1" alignment="left" verticalAlignment="center" text="10" textAlignment="center" numberOfLines="0" id="DFd-L3-5fz">
                                                         <color key="textColor" red="0.94117647059999998" green="0.50980392159999999" blue="0.29803921570000003" alpha="1" colorSpace="calibratedRGB"/>
                                                         <fontDescription key="font" type="system" pointSize="9"/>
                                                     </label>
@@ -38,6 +26,18 @@
                                                     </label>
                                                 </items>
                                                 <edgeInsets key="margins" left="0.0" right="0.0" top="2" bottom="2"/>
+                                            </group>
+                                            <group width="1" alignment="left" id="Ehw-tX-wOG">
+                                                <items>
+                                                    <label width="20" height="18" alignment="left" verticalAlignment="center" text="00" textAlignment="center" baselineAdjustment="alignCenters" id="Lsl-Oo-151">
+                                                        <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                                                        <fontDescription key="font" type="system" pointSize="11"/>
+                                                    </label>
+                                                    <label height="18" alignment="left" verticalAlignment="center" text="domain" baselineAdjustment="alignCenters" minimumScaleFactor="0.5" id="LCA-Ei-uIU">
+                                                        <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                                                        <fontDescription key="font" type="system" pointSize="11"/>
+                                                    </label>
+                                                </items>
                                             </group>
                                         </items>
                                         <edgeInsets key="margins" left="0.0" right="0.0" top="2" bottom="2"/>
@@ -93,7 +93,7 @@
                     </connections>
                 </controller>
             </objects>
-            <point key="canvasLocation" x="414" y="343"/>
+            <point key="canvasLocation" x="405" y="344.5"/>
         </scene>
         <!--Static Notification Interface Controller-->
         <scene sceneID="AEw-b0-oYE">
@@ -119,4 +119,5 @@
             <point key="canvasLocation" x="468" y="643"/>
         </scene>
     </scenes>
+    <color key="tintColor" red="0.94117647059999998" green="0.50980392159999999" blue="0.29803921570000003" alpha="1" colorSpace="calibratedRGB"/>
 </document>

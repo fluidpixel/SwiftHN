@@ -182,7 +182,7 @@ class NewsViewController: HNTableViewController, NewsCellDelegate, CategoriesVie
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject!)  {
         if (segue.identifier == "toWebview") {
             var destination = segue.destinationViewController as! WebviewController
-            if let selectedRows = self.tableView.indexPathsForSelectedRows() {
+            if let selectedRows = self.tableView.indexPathsForSelectedRows {
                 destination.post = self.datasource[selectedRows[0].row] as? Post
             }
         }
@@ -196,8 +196,7 @@ class NewsViewController: HNTableViewController, NewsCellDelegate, CategoriesVie
         
     }
     
-    override func tableView(tableView: UITableView, editActionsForRowAtIndexPath indexPath: NSIndexPath) -> [AnyObject]
-    {
+    override func tableView(tableView: UITableView, editActionsForRowAtIndexPath indexPath: NSIndexPath) -> [UITableViewRowAction]? {
         var readingList = UITableViewRowAction(style: UITableViewRowActionStyle.Normal,
             title: "Read\nLater",
             handler: {(action: UITableViewRowAction!, indexpath: NSIndexPath!) -> Void in

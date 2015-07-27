@@ -762,7 +762,7 @@
 				TargetAttributes = {
 					9F1EE915194105C30061B4B6 = {
 						CreatedOnToolsVersion = 6.0;
-						DevelopmentTeam = Z6P74P6T99;
+						DevelopmentTeam = LCP5AMLC52;
 					};
 					9F1EE91F194105C30061B4B6 = {
 						CreatedOnToolsVersion = 6.0;
@@ -770,7 +770,7 @@
 					};
 					9F21AA621940A45700CF4E63 = {
 						CreatedOnToolsVersion = 6.0;
-						DevelopmentTeam = Z6P74P6T99;
+						DevelopmentTeam = LCP5AMLC52;
 						SystemCapabilities = {
 							com.apple.BackgroundModes = {
 								enabled = 1;
@@ -786,15 +786,15 @@
 					};
 					9F7E9F54196BE6AB008B2F35 = {
 						CreatedOnToolsVersion = 6.0;
-						DevelopmentTeam = Z6P74P6T99;
+						DevelopmentTeam = LCP5AMLC52;
 					};
 					9FAF121E1AAF594C00FBD9B3 = {
 						CreatedOnToolsVersion = 6.2;
-						DevelopmentTeam = Z6P74P6T99;
+						DevelopmentTeam = LCP5AMLC52;
 					};
 					9FAF122B1AAF594C00FBD9B3 = {
 						CreatedOnToolsVersion = 6.2;
-						DevelopmentTeam = Z6P74P6T99;
+						DevelopmentTeam = LCP5AMLC52;
 					};
 				};
 			};

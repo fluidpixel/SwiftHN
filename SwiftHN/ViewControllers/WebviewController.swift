@@ -41,19 +41,30 @@ class WebviewController: UIViewController, UIWebViewDelegate {
     func setupShareButton() {
         self.navigationItem.rightBarButtonItem = nil
         let shareItem = UIBarButtonItem(barButtonSystemItem: UIBarButtonSystemItem.Action, target: self, action: "onShareButton")
-        self.navigationItem.rightBarButtonItem = shareItem
+        let commentsButton = UIBarButtonItem(barButtonSystemItem: UIBarButtonSystemItem.Organize, target: self, action: "onCommentButton")
+        self.navigationItem.rightBarButtonItems = [shareItem, commentsButton]
+        
     }
     
     func onShareButton() {
         Helper.showShareSheet(self.post, controller: self, barbutton: self.navigationItem.rightBarButtonItem)
     }
+    
+    func onCommentButton() {
+        let detailVC = self.storyboard?.instantiateViewControllerWithIdentifier("DetailViewController") as! DetailViewController
+        detailVC.post = post
+        self.showDetailViewController(detailVC, sender: self)
+        
+//        performSegueWithIdentifier("commentSegue", sender: self)
+    }
 
     func webViewDidStartLoad(webView: UIWebView) {
-        self.setupLoadingButton()
+        self.setupShareButton()
+        
     }
     
     func webViewDidFinishLoad(webView: UIWebView) {
-        self.setupShareButton()
+//        self.setupShareButton()
         self.title = webView.stringByEvaluatingJavaScriptFromString("document.title")
     }
 }
